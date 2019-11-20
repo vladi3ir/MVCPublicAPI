@@ -1,0 +1,33 @@
+﻿@model MVCPublicAPI.Models.StarwarsViewModel
+
+@{
+    ViewData["Title"] = "StarwarsView";
+}
+
+    @*<style>
+        body {
+                                      color: whitesmoke;
+
+            background-image: url("http://getwallpapers.com/wallpaper/full/d/7/7/92778.jpg#.XdFnrU-RO9o.link");
+              background-size: auto;
+
+        }
+    </style>*@
+
+<h1>Starwars</h1>
+
+<div class="dropdown">
+    <form asp-controller="Starwars" asp-action="UserPlanetsView">
+        <div class="form-group">
+            <select asp-for="@Model.UserSelectedPlanet">
+
+                @foreach (var item in Model.Planets)
+                {
+                    <option value="@item.Name">@item.Name</option>
+                }
+            </select>
+            <input type="submit" value="Submit" class="btn btn-primary" />
+
+        </div>
+    </form>
+</div> 

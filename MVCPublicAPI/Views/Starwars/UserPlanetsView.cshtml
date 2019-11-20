@@ -1,0 +1,32 @@
+﻿
+
+@model MVCPublicAPI.Models.StarwarsViewModel
+@{
+    ViewData["Title"] = "StarwarsFormView";
+}
+    @*<style>
+        body {
+             color: whitesmoke;
+            background-image: url("http://getwallpapers.com/wallpaper/full/d/7/7/92778.jpg#.XdFnrU-RO9o.link");
+              background-size: auto;
+        }
+    </style>*@
+
+    <h1>
+        @Html.DisplayNameFor(model => model.UserSelectedPlanet)
+    </h1>
+
+
+<div>
+    <h4>Your Favorite Planets</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserSelectedPlanet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserSelectedPlanet)
+        </dd>
+    </dl>
+</div>
+
